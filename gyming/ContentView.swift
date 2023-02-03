@@ -9,19 +9,19 @@ import SwiftUI
 
 let screen = UIScreen.main.bounds
 
-struct Box {
-    var id: Int
-    let title, imageUrl: String
-}
+//struct Box {
+//    var id: Int
+//    let title, imageUrl: String
+//}
 
 struct ContentView: View {
-    let boxes: [Box] = [
-        Box(id: 0, title: "Go Training!", imageUrl: "TRX"),
-        Box(id: 1, title: "Tech Stuff", imageUrl: "1"),
-        Box(id: 2, title: "Code Stuff", imageUrl: "2"),
-        Box(id: 3, title: "Photo Stuff", imageUrl: "3"),
-        Box(id: 4, title: "SwiftUI Stuff", imageUrl: "0"),
-    ]
+//    let boxes: [Box] = [
+//        Box(id: 0, title: "Go Training!", imageUrl: "TRX"),
+//        Box(id: 1, title: "Tech Stuff", imageUrl: "1"),
+//        Box(id: 2, title: "Code Stuff", imageUrl: "2"),
+//        Box(id: 3, title: "Photo Stuff", imageUrl: "3"),
+//        Box(id: 4, title: "SwiftUI Stuff", imageUrl: "0"),
+//    ]
     
     var body: some View {
         NavigationView {
