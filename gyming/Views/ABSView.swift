@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ABSView: View {
+struct ABSTextView: View {
     var body: some View {
         Text("ABS")
             .font(.largeTitle)
@@ -17,6 +17,6 @@ struct ABSView: View {
 
 struct ABSView_Previews: PreviewProvider {
     static var previews: some View {
-        ABSView()
+        ABSTextView()
     }
 }

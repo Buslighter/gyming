@@ -9,36 +9,30 @@ import SwiftUI
 
 let screen = UIScreen.main.bounds
 
-//struct Box {
-//    var id: Int
-//    let title, imageUrl: String
-//}
-
 struct ContentView: View {
-//    let boxes: [Box] = [
-//        Box(id: 0, title: "Go Training!", imageUrl: "TRX"),
-//        Box(id: 1, title: "Tech Stuff", imageUrl: "1"),
-//        Box(id: 2, title: "Code Stuff", imageUrl: "2"),
-//        Box(id: 3, title: "Photo Stuff", imageUrl: "3"),
-//        Box(id: 4, title: "SwiftUI Stuff", imageUrl: "0"),
-//    ]
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 12) {
-                    BoxView()
-                    BoxView1()
-                    BoxView2()
-                    BoxView3()
-                    BoxView4()
-                }.navigationTitle("Go Training!")
+                VStack(spacing: 20) {
+                    FullBodyView()
+                    ChestView()
+                    ABSView()
+                    BackView()
+                    LegsView()
+                        .navigationBarItems(trailing:
+                                                Button("User") {
+                            
+                        }
+                       
+                    )
+                }.navigationTitle("Вперед!")
             }
         }.padding()
     }
 }
 
-struct BoxView: View {
+struct FullBodyView: View {
     @State private var isShowedFullBody = false
     
     var body: some View {
@@ -52,37 +46,41 @@ struct BoxView: View {
                     isShowedFullBody.toggle()
                 }
             
-            Text("Full Body")
+            Text("Моя тренировка")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }.sheet(isPresented: $isShowedFullBody) {
-            FullBodyView()
+            FullBodyTextView()
+            Button("Start") {
+            }.buttonStyle(.bordered)
+                .cornerRadius(12)
         }
     }
 }
 
-struct BoxView1: View {
+struct ChestView: View {
     @State private var isShowedChest = false
-
+    
     var body: some View {
-        VStack {
-            Image("TRXChest")
-                .resizable()
-                .frame(width: screen.width / 1.1, height: screen.width / 1.1)
-                .cornerRadius(30)
-                .onTapGesture {
-                    isShowedChest.toggle()
-                }
-            Text("Chest")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-        }.sheet(isPresented: $isShowedChest) {
-            ChestView()
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
+                Image("TRXChest")
+                    .resizable()
+                    .frame(width: screen.width / 1.1, height: screen.width / 1.1)
+                    .cornerRadius(30)
+                    .onTapGesture {
+                        isShowedChest.toggle()
+                    }
+                Text("Грудь")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }.sheet(isPresented: $isShowedChest) {
+                ChestTextView()
+            }
         }
     }
 }
-
-struct BoxView2: View {
+struct ABSView: View {
     @State private var isShowedABS = false
 
     var body: some View {
@@ -94,16 +92,16 @@ struct BoxView2: View {
                 .onTapGesture {
                     isShowedABS.toggle()
                 }
-            Text("ABS")
+            Text("Пресс")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }.sheet(isPresented: $isShowedABS) {
-            ABSView()
+            ABSTextView()
         }
     }
 }
 
-struct BoxView3: View {
+struct LegsView: View {
     @State private var isShowedLegs = false
 
     var body: some View {
@@ -115,16 +113,16 @@ struct BoxView3: View {
                 .onTapGesture {
                     isShowedLegs.toggle()
                 }
-            Text("Legs")
+            Text("Ноги")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }.sheet(isPresented: $isShowedLegs) {
-            LegsView()
+            LegsTextView()
         }
     }
 }
 
-struct BoxView4: View {
+struct BackView: View {
     @State private var isShowedBack = false
 
     var body: some View {
@@ -136,7 +134,7 @@ struct BoxView4: View {
                 .onTapGesture {
                     isShowedBack.toggle()
                 }
-            Text("Back")
+            Text("Спина")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }.sheet(isPresented: $isShowedBack) {

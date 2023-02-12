@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChestView: View {
+struct ChestTextView: View {
     var body: some View {
         Text("Chest")
             .font(.largeTitle)
@@ -17,6 +17,6 @@ struct ChestView: View {
 
 struct ChestView_Previews: PreviewProvider {
     static var previews: some View {
-        ChestView()
+        ChestTextView()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LegsView: View {
+struct LegsTextView: View {
     var body: some View {
         Text("Legs")
             .font(.largeTitle)
@@ -17,6 +17,6 @@ struct LegsView: View {
 
 struct LegsView_Previews: PreviewProvider {
     static var previews: some View {
-        LegsView()
+        LegsTextView()
     }
 }

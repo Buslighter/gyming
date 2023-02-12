@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackView: View {
+struct BackTextView: View {
     var body: some View {
         Text("Back")
             .font(.largeTitle)
@@ -17,6 +17,6 @@ struct BackView: View {
 
 struct BackView_Previews: PreviewProvider {
     static var previews: some View {
-        BackView()
+        BackTextView()
     }
 }
