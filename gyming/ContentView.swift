@@ -22,9 +22,7 @@ struct ContentView: View {
                     LegsView()
                         .navigationBarItems(trailing:
                                                 Button("User") {
-                            
                         }
-                       
                     )
                 }.navigationTitle("Вперед!")
             }
