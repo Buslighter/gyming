@@ -1,5 +1,5 @@
 //
-//  BackView.swift
+//  ABSView.swift
 //  gyming
 //
 //  Created by Елисей Коновалов on 3.2.23..
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackView: View {
+struct HandsView: View {
     @State private var isShowedFullBody = false
     var body: some View {
         VStack {
@@ -32,8 +32,8 @@ struct BackView: View {
     }
 }
 
-struct BackView_Previews: PreviewProvider {
+struct HandsView_Previews: PreviewProvider {
     static var previews: some View {
-        BackView()
+        HandsView()
     }
 }

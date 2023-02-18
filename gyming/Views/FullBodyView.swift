@@ -2,27 +2,33 @@
 //  FullBodyView.swift
 //  gyming
 //
-//  Created by Елисей Коновалов on 2.2.23..
+//  Created by Елисей Коновалов on 18.2.23..
 //
 
 import SwiftUI
 
 struct FullBodyView: View {
-//    var name: String
+    @State private var isShowedFullBody = false
     
     var body: some View {
-        List {
-            Text("жопа")
-            Text("руки")
-            Text("ноги")
-            Text("сиськи")
-            Text("сиськи")
-            Text("сиськи")
-            Text("сиськи")
-//            FullBodyView(name: "жопа")
-//            FullBodyView(name: "руки")
-//            FullBodyView(name: "ноги")
-//            FullBodyView(name: "сиськи")
+        VStack {
+            Image("TRX3")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: screen.width / 2, height: screen.width / 2)
+                .cornerRadius(30)
+                .onTapGesture {
+                    isShowedFullBody.toggle()
+                }
+            
+            Text("Моя тренировка")
+                .fontWeight(.bold)
+        }.sheet(isPresented: $isShowedFullBody) {
+            FullBodyTextView()
+            Button("Вперед") {
+            }.buttonStyle(.bordered)
+                .cornerRadius(10)
+                .shadow(radius: 10)
         }
     }
 }

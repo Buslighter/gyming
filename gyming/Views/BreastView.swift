@@ -1,5 +1,5 @@
 //
-//  BackView.swift
+//  ChestView.swift
 //  gyming
 //
 //  Created by Елисей Коновалов on 3.2.23..
@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct BackView: View {
+struct BreastView: View {
     @State private var isShowedFullBody = false
+    
     var body: some View {
         VStack {
-            Image("TRX5")
+            Image("TRX3")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: screen.width / 2, height: screen.width / 2)
@@ -32,8 +33,8 @@ struct BackView: View {
     }
 }
 
-struct BackView_Previews: PreviewProvider {
+struct BreastView_Previews: PreviewProvider {
     static var previews: some View {
-        BackView()
+        BreastView()
     }
 }
