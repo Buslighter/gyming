@@ -20,9 +20,9 @@ struct TabBarView: View {
                     Label("Мои тренирокви", systemImage: "heart.fill")
                 }
             
-            BreastView()
+            ProfileView()
                 .tabItem {
-                    Label("Настройки", systemImage: "person.crop.circle")
+                    Label("Профиль", systemImage: "person.crop.circle")
                 }
         }
     }
