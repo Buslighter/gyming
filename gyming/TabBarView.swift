@@ -10,14 +10,14 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            ContentView()
+            MainView(groupsVM: GroupsViewModel())
                 .tabItem{
-                    Label("Home", systemImage: "house.fill")
+                    Label("Главная", systemImage: "house.fill")
                 }
             
             MyTrainingView()
                 .tabItem{
-                    Label("Мои тренирокви", systemImage: "heart.fill")
+                    Label("Мои тренировки", systemImage: "heart.fill")
                 }
             
             ProfileView()

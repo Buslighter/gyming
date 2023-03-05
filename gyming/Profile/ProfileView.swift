@@ -11,7 +11,7 @@ struct ProfileView: View {
     var body: some View {
             VStack{
                 UserImageCircleView()
-                Text("Супер-Мега-Ладона")
+                Text("Супер-Мега-Ладон")
                     .font(.title3)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)

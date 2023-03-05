@@ -20,162 +20,169 @@ struct FullBodyTextView: View {
     ]
     
     var body: some View {
-        List {
-            HStack() {
-                Image("TRX")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60.0, height: 60.0)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-                Text("Подъемы ног в висе 3*15")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 0.0)
-                    
-                Spacer()
-                Image(systemName: "checkmark")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 30.0, height: 30.0)
-            }
-            
-            HStack {
-                Image("TRX")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-            
-                Text("Жим гантелей в наклоне 3*15")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 0.0)
-                    
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack {
-                Image("TRXChest")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
+        VStack {
+            List {
+                HStack() {
+                    Image("TRX")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60.0, height: 60.0)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                    Text("Подъемы ног в висе 3*15")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 0.0)
+                        
+                    Spacer()
+                    Image(systemName: "checkmark")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 30.0, height: 30.0)
+                }
                 
-                Text("Тяга верх блока 3*15")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 0.0)
-                    
-                    
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack {
-                Image("TRX5")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
+                HStack {
+                    Image("TRX")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
                 
-                Text("Жим гантелей сидя 3*12")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 0.0)
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack {
-                Image("TRXBack")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-            
-                Text("Сгибания со штангой стоя 3*12")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
+                    Text("Жим гантелей в наклоне 3*15")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 0.0)
+                        
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack {
+                    Image("TRXChest")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
                     
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack() {
-                Image("Triceps")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-               
-                Text("Французский жим лежа 3*15")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack {
-                Image("Legs")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-               
-                Text("Жим ногами 4*20")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-            HStack {
-                Image("TRXABS")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
+                    Text("Тяга верх блока 3*15")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 0.0)
+                        
+                        
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack {
+                    Image("TRX5")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                    
+                    Text("Жим гантелей сидя 3*12")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 0.0)
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack {
+                    Image("TRXBack")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
                 
-                Text("Подъемы на носки сидя 3*25")
-                    .font(.title2)
-                    .multilineTextAlignment(.leading)
+                    Text("Сгибания со штангой стоя 3*12")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack() {
+                    Image("Triceps")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                   
+                    Text("Французский жим лежа 3*15")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack {
+                    Image("Legs")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                   
+                    Text("Жим ногами 4*20")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+                HStack {
+                    Image("TRXABS")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60)
+                        .clipped()
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
                     
-                Spacer()
-                Image(systemName: "checkmark.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40.0, height: 40.0)
-            }
-        }.navigationTitle("Все тело")
+                    Text("Подъемы на носки сидя 3*25")
+                        .font(.title2)
+                        .multilineTextAlignment(.leading)
+                        
+                    Spacer()
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40.0, height: 40.0)
+                }
+            }.navigationTitle("Все тело")
+            Button("Вперед"){}
+                .buttonStyle(.bordered)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+        }
+        
     }
 }
 
