@@ -15,15 +15,16 @@ struct MainView: View {
         VStack{
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
+//                        Чтобы поменять порядок групп мышц link: ExercisesModel.swift:82
                         ForEach(groupsVM.groups){ group in
-                            ExcercisesView(excerciseVM: ExcercisesViewModel(excerciseGroup: group), typeOfSize: .Big)
+                            ExercisesView(ExerciseVM: ExercisesViewModel(ExerciseGroup: group), typeOfSize: .Big)
                         }
                     }
                 }.padding(.horizontal)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 12) {
                         ForEach(groupsVM.groups){ group in
-                            ExcercisesView(excerciseVM: ExcercisesViewModel(excerciseGroup: group), typeOfSize: .Small)
+                            ExercisesView(ExerciseVM: ExercisesViewModel(ExerciseGroup: group), typeOfSize: .Small)
                         }
                         NavigationView {}
                     }

@@ -1,5 +1,5 @@
 //
-//  ExcercisesView.swift
+//  ExercisesView.swift
 //  gyming
 //
 //  Created by gleba on 04.03.2023.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ExcercisesView: View {
+struct ExercisesView: View {
     @State private var isShowed = false
-    @ObservedObject var excerciseVM: ExcercisesViewModel
+    @ObservedObject var ExerciseVM: ExercisesViewModel
     private (set) var typeOfSize: DrawingConstraints.TypeOfSize
     var body: some View {
         VStack {
-            Image(excerciseVM.model.imageName ?? "TRX")
+            Image(ExerciseVM.model.imageName ?? "TRX")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: DrawingConstraints.frame(typeOfSize).width, height: DrawingConstraints.frame(typeOfSize).height)
@@ -27,7 +27,7 @@ struct ExcercisesView: View {
                         break
                     }
                 }
-            Text(excerciseVM.model.name)
+            Text(ExerciseVM.model.name)
                 .font(DrawingConstraints.font(typeOfSize))
                 
         }.sheet(isPresented: $isShowed) {
@@ -60,9 +60,9 @@ struct ExcercisesView: View {
        }
 }
 
-struct ExcercisesView_Previews: PreviewProvider {
+struct ExercisesView_Previews: PreviewProvider {
     static var previews: some View {
-        let excercise = ExcercisesViewModel(excerciseGroup: ExcerciseGroup(nameOfGroup: "Full Body"))
-        ExcercisesView(excerciseVM: excercise, typeOfSize: .Big)
+        let Exercise = ExercisesViewModel(ExerciseGroup: ExerciseGroup(muscleGroup: .fullbody))
+        ExercisesView(ExerciseVM: Exercise, typeOfSize: .Big)
     }
 }

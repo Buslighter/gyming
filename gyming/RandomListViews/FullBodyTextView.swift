@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct Extercises: Identifiable {
-    let id = UUID()
-    let name: String
-    let image: String
-}
-
 struct FullBodyTextView: View {
     
     @State var extercises = [
@@ -22,25 +16,7 @@ struct FullBodyTextView: View {
     var body: some View {
         VStack {
             List {
-                HStack() {
-                    Image("TRX")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 60.0, height: 60.0)
-                        .clipped()
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                    Text("Подъемы ног в висе 3*15")
-                        .font(.title2)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading, 0.0)
-                        
-                    Spacer()
-                    Image(systemName: "checkmark")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 30.0, height: 30.0)
-                }
+                ExerciseCardCellView()
                 
                 HStack {
                     Image("TRX")
@@ -192,6 +168,30 @@ struct FullBodyTextView_Previews: PreviewProvider {
         NavigationView {
             FullBodyTextView()
                 .padding(.top, 20)
+        }
+    }
+}
+
+struct ExerciseCardCellView: View {
+    var body: some View {
+        HStack{
+            Image("TRX")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 60.0, height: 60.0)
+                .clipped()
+                .cornerRadius(10)
+                .shadow(radius: 10)
+            Text("Подъемы ног в висе 3*15")
+                .font(.title2)
+                .multilineTextAlignment(.leading)
+                .padding(.leading, 0.0)
+            
+            Spacer()
+            Image(systemName: "checkmark")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 30.0, height: 30.0)
         }
     }
 }

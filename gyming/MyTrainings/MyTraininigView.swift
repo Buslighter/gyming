@@ -15,7 +15,7 @@ struct Exercises: Identifiable {
 
 struct MyTrainingView: View {
     
-    @State var exercises = [
+    @State var Exercises = [
         
     ]
     
